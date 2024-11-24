@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<!-- this is the body of the webpae which includes the navigation bar -->
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Quiz</a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="aboutpage.html">About</a>
+            <a href="loginpage.html">Login</a>
+            <a href="quizgamepage.html">Game</a>
+            <a href="Leaderboard.html">Leaderboard</a>
+            <a href="registration.html">Registration</a>
+        </nav>
+    </header>
+
+    <!-- this is the layout of the quiz elements  -->
+
+    <div class="quiz-container">
+        <div id="quiz">
+            <div id="question-number">Question 1 of 4</div>
+            <div id="question">Question Text</div>
+            <div class="options">
+                <button class="option">Option 1</button>
+                <button class="option">Option 2</button>
+                <button class="option">Option 3</button>
+                <button class="option">Option 4</button>
+            </div>
+
+            <button id="next-btn" style="display: none;">Next</button>
+
+            <span id="timer">Time Left: 10s</span>
+
+        </div>
+
+        <div id="result" class="hide">
+            <h2>Your Score: <span id="score"></span></h2>
+        </div>
+    </div>
+     
+    <!-- footer for the webpage  -->
+     
+    <footer class="footer">
+        <p>&copy; 2024 Quiz Application. All rights reserved.</p>
+    </footer>
+
+    <script type="module">
+        import {Quiz} from '../JavaScript/quiz.js';
+        const quiz = new Quiz();
+    </script>
+</body>
+
+</html>
